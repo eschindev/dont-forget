@@ -17,6 +17,9 @@ FamilyMember.init(
     fam_rel: {
       type: DataTypes.STRING,
     },
+    birthday: {
+      typy: DataTypes.STRING,
+    },
      friend_id: {
        type: DataTypes.INTEGER,
        references: {
