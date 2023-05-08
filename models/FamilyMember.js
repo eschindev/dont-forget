@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class fam_member extends Model {}
+class FamilyMember extends Model {}
 
-fam_member.init(
+FamilyMember.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,30 +11,27 @@ fam_member.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    email: {
+    fam_name: {
       type: DataTypes.STRING,
     },
-    phone: {
+    fam_rel: {
       type: DataTypes.STRING,
     },
-    address: {
-      type: DataTypes.STRING,
-    }
-    // user_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'user',
-    //     key: 'id',
-    //   },
-    // },
+     friend_id: {
+       type: DataTypes.INTEGER,
+       references: {
+         model: 'friend',
+         key: 'id',
+       },
+     },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'fam_member',
+    modelName: 'FamilyMember',
   }
 );
 
-module.exports = fam_member;
+module.exports = FamilyMember;
