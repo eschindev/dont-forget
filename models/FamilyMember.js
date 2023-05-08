@@ -1,5 +1,5 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class FamilyMember extends Model {}
 
@@ -18,22 +18,22 @@ FamilyMember.init(
       type: DataTypes.STRING,
     },
     birthday: {
-      typy: DataTypes.STRING,
+      type: DataTypes.STRING,
     },
-     friend_id: {
-       type: DataTypes.INTEGER,
-       references: {
-         model: 'friend',
-         key: 'id',
-       },
-     },
+    friend_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "friend",
+        key: "id",
+      },
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'FamilyMember',
+    modelName: "FamilyMember",
   }
 );
 
