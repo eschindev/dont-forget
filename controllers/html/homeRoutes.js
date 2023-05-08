@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
 
       const friends = friendData.map((friend) => friend.get({ plain: true }));
 
-      res.render("homepage", {
+      res.render("friendlist", {
         friends,
         logged_in: req.session.logged_in,
       });
