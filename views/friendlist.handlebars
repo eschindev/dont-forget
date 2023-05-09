@@ -4,7 +4,7 @@
   
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-5">
     {{!-- check here --}}
                 <ul>
                     {{#each friend as |friend|}}
@@ -13,7 +13,7 @@
                     {{/each}}
                 </ul>
             </div>
-        <div class="col-6">        
+        <div class="col-5">        
         <ul>
 {{!-- check here --}}
                 {{#each familyMember as |familyMember|}}
@@ -23,5 +23,13 @@
                     {{/each}}
                 </ul>
         </div>
-</div>
+        <div class="col-2">
+            <h4>ENTER A NEW FRIEND</h4>
+                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Button</button>
+            </div>
+        </div>
+    </div>
+
 </section>
