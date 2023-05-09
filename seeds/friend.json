@@ -1,26 +1,29 @@
 [
     {
       "name": "Santa Claus",
-      "birthday": "password12345",
-      "significant_other": "" ,
-      "phone": "",
-      "email": "",
-      "address": ""
+      "birthday": "12-25-0000",
+      "significant_other": "Mrs. Claus" ,
+      "phone": "555-555-5556",
+      "email": "jollyman@yahoo.com",
+      "address": "123 Elf Road, North Pole 88888",
+      "user_id": 1
     },
     {
-        "name": "Santa Claus",
-        "birthday": "password12345",
-        "significant_other": "" ,
-        "phone": "",
-        "email": "",
-        "address": ""
+        "name": "Jane Doe",
+        "birthday": "January 1st, 2043",
+        "significant_other": "John Doe" ,
+        "phone": "000-000-0000",
+        "email": "no-name@gmail.com",
+        "address": "1600 Pennsylvania Ave NW Washington, DC 20500",
+        "user_id": 2
     },
     {
-        "name": "Santa Claus",
-        "birthday": "password12345",
-        "significant_other": "" ,
-        "phone": "",
-        "email": "",
-        "address": ""
+        "name": "Billy Bob",
+        "birthday": "Oct 31, 1864",
+        "significant_other": "Betty Bob" ,
+        "phone": "800-588-2300",
+        "email": "justbobbing@aol.com",
+        "address": "31 Billy Bob St Hennessey, OK 73742",
+        "user_id": 3
     }
   ]
