@@ -36,15 +36,8 @@ Friend.init(
       allowNull: true,
     },
     photo: {
-      type: DataTypes.BINARY,
+      type: DataTypes.BLOB,
       allowNull: true,
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
     },
   },
   {
