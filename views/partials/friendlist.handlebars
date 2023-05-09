@@ -1,0 +1,28 @@
+<section class="container">
+  <h3 class="all-friend-page">{{User.username}}</h3>
+  <h4>Edit Friends/Family</h4>
+  
+  <div class="container">
+  <div class="row">
+    <div class="col-6">
+    {{!-- check here --}}
+        <ul>
+        {{!-- {{#each friends}} --}}
+   {{!-- <li>{{ this }}</li> --}}
+            <span style="display: inline-block; vertical-align: middle;">Sue</span>
+            <button style="display: inline-block; vertical-align: middle;">edit</button><button style="display: inline-block; vertical-align: middle;">delete</button>
+        {{!-- {{/each}} --}}
+        </ul>
+        </div>
+    <div class="col-6">        
+        <ul>
+{{!-- check here --}}
+        {{#each familyMember}}
+            <li>{{ this }}</li>
+            <span style="display: inline-block; vertical-align: middle;">{{ familyMember }}</span>
+            <button style="display: inline-block; vertical-align: middle;">Button</button>
+        {{/each}}
+        </ul>
+    </div>
+</div>
+</section>
