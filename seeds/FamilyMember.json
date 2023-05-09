@@ -1,0 +1,20 @@
+[
+    {
+      "fam_name": "Rudolph Rednose",
+      "fam_rel": "Son" ,
+      "birthday": "12-24-0020",
+      "friend_id": 1
+    },
+    {
+        "fam_name": "Jim Doe",
+        "fam_rel": "Cousin" ,
+        "birthday": "2-14-2038",
+        "friend_id": 2
+      },
+    {
+        "fam_name": "Bethany Bob",
+        "fam_rel": "Mother" ,
+        "birthday": "July 4th, 1804",
+        "friend_id": 3
+    }
+  ]
