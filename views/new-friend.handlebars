@@ -1,14 +1,14 @@
 <link
-            rel='stylesheet'
-            href='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/dropzone.min.css'
-        />
+    rel='stylesheet'
+    href='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/dropzone.min.css'
+/>
 
 <h1>ADD A FRIEND</h1>
 
 <div class='row'>
     <div class='mx-auto col-10 col-md-8 col-lg-6'>
-        <form class="add-friend-form">
-            <form action="/target" class="dropzone"></form>
+        <form class='add-friend-form'>
+            <form action='/target' class='dropzone'></form>
 
             <div class='form-group'>
                 <label for='example'>Name</label>
@@ -19,7 +19,7 @@
                     aria-describedby='example'
                     placeholder='Last Name'
                 />
-            </div>                        
+            </div>
             <div class='form-group'>
                 <label for='example'>Birthday</label>
                 <input
@@ -28,8 +28,8 @@
                     id='birthday_input'
                     placeholder='Enter Birthday'
                 />
-                </div>
-                <div class='form-group'>
+            </div>
+            <div class='form-group'>
                 <label for='example'>Signficant Other</label>
                 <input
                     type='text'
@@ -47,7 +47,7 @@
                     aria-describedby='example'
                     placeholder='Enter email'
                 />
-            </div>                        
+            </div>
             <div class='form-group'>
                 <label for='example'>Phone</label>
                 <input
@@ -57,41 +57,51 @@
                     aria-describedby='example'
                     placeholder='Enter phone'
                 />
-            {{! pets question? }}
-            <div class='form-group'>
-                <label for='example'>Pets??</label>
-                <input
-                    type='text'
-                    class='form-control'
-                    id='pets_input'
-                    aria-describedby='emailHelp'
-                    placeholder='Enter pets'
-                />
-            </div>                      
-            <div class='form-group'>
-                <label for='example'>Career</label>
-                <input
-                    type='text'
-                    class='form-control'
-                    id='career_input'
-                    placeholder='Career'
-                />
-            </div>
-            <div class='form-group'>
-                <label for='example'>Additional comments</label>
-                <textarea
-                    class='form-control'
-                    id='comments_input'
-                    rows='3'
-                ></textarea>
-            </div>
-            <div class='form-group'>
-                    
-                    <button id='submit-button' class="btn btn-outline-secondary" type="button">Add a family member</button>
+                {{! pets question? }}
+                <div class='form-group'>
+                    <label for='example'>Pets??</label>
+                    <input
+                        type='text'
+                        class='form-control'
+                        id='pets_input'
+                        aria-describedby='emailHelp'
+                        placeholder='Enter pets'
+                    />
                 </div>
+                <div class='form-group'>
+                    <label for='example'>Career</label>
+                    <input
+                        type='text'
+                        class='form-control'
+                        id='career_input'
+                        placeholder='Career'
+                    />
+                </div>
+                <div class='form-group'>
+                    <label for='example'>Additional comments</label>
+                    <textarea
+                        class='form-control'
+                        id='comments_input'
+                        rows='3'
+                    ></textarea>
+                </div>
+
+                <div class='form-group'>
+                    <a href='/friend'><button
+                            class='new-friend-save-button'
+                            type='button'
+                        >SAVE FRIEND</button></a>
+                </div>
+
+                <a href='familyMember'><button
+                        id='submit-button'
+                        class='btn btn-outline-secondary'
+                        type='button'
+                    >Add a family member</button></a>
+            </div>
         </form>
     </div>
 </div>
 <script
-            src='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/min/dropzone.min.js'
-        ></script>
+    src='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/min/dropzone.min.js'
+></script>
