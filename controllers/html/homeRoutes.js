@@ -12,7 +12,18 @@ router.get("/", async (req, res) => {
         order: [["name", "ASC"]],
       });
 
-      const friends = friendData.map((friend) => friend.get({ plain: true }));
+      const friendsTemp = friendData.map((friend) => {
+        friend.get({ plain: true });
+      });
+
+      const friends = friendsTemp.map((friend) => {
+        const photoBuffer = friend.photo;
+        const photoDataUri = `data:image/png;base64,${photoBuffer.toString(
+          "base64"
+        )}`;
+        friend.photo = photoDataUri;
+        return friend;
+      });
 
       res.render("friendlist", {
         friends,
