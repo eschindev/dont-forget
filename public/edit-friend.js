@@ -1,3 +1,15 @@
+const Dropzone = require("dropzone");
+
+let photo;
+
+const myDropzone = new Dropzone(".dropzone", {
+  autoProcessQueue: false,
+  paramName: "photo",
+  acceptedFiles: "image/*",
+  maxFiles: 1,
+  createImageThumbnails: false,
+});
+
 const editFriendFormHandler = async (event) => {
   event.preventDefault();
 
@@ -9,19 +21,25 @@ const editFriendFormHandler = async (event) => {
   const phone = document.querySelector("#phone_input").value.trim();
   const email = document.querySelector("#email_input").value.trim();
   const address = document.querySelector("#address_input").value.trim();
-  const friendId = window.location.pathname.split("/")[2];
+  const friendId = parseInt(window.location.pathname.split("/")[2]);
+
+  const data = {
+    name,
+    birthday,
+    significant_other,
+    phone,
+    email,
+    address,
+  };
+
+  if (photo) {
+    data.photo = photo;
+  }
 
   if (Number.isInteger(friendId)) {
     const response = await fetch(`/api/friend/${friendId}`, {
       method: "PUT",
-      body: JSON.stringify({
-        name,
-        birthday,
-        significant_other,
-        phone,
-        email,
-        address,
-      }),
+      body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" },
     });
 
@@ -32,6 +50,18 @@ const editFriendFormHandler = async (event) => {
     }
   }
 };
+
+myDropzone.on("addedfile", (file) => {
+  document.querySelector("#submit-button").disabled = true;
+
+  const reader = new FileReader();
+  reader.onload = (event) => {
+    photo = event.target.result.split(",")[1];
+
+    document.querySelector("#submit-button").disabled = false;
+  };
+  reader.readAsDataURL(file);
+});
 
 document
   .querySelector(".edit-friend-form")
