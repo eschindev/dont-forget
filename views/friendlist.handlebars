@@ -1,33 +1,39 @@
-<section class="container">
-  <h3 class="all-friend-page">{{User.username}}</h3>
-  <h4>Edit Friends/Family</h4>
-  
-    <div class="container">
-        <div class="row">
-            <div class="col-5">
-    {{!-- check here --}}
-                <ul>
-                    {{#each friend as |friend|}}
-                    <span style="display: inline-block; vertical-align: middle;">{{ friend.id }}</span>
-                    <button style="display: inline-block; vertical-align: middle;">edit</button><button style="display: inline-block; vertical-align: middle;">delete</button>
-                    {{/each}}
-                </ul>
-            </div>
-        <div class="col-5">        
-        <ul>
-{{!-- check here --}}
-                {{#each familyMember as |familyMember|}}
-                <li>{{ this }}</li>
-                <span style="display: inline-block; vertical-align: middle;">{{ familyMember.id }}</span>
-                <button style="display: inline-block; vertical-align: middle;">Button</button><button style="display: inline-block; vertical-align: middle;">delete</button>
-                    {{/each}}
-                </ul>
+<section class='container'>
+    <h3 class='all-friend-page'>{{User.username}}</h3>
+    <h4>Edit Friends/Family</h4>
+    <div class='row justify-content-center'>
+        <div class='col'>
+            {{! check here }}
+            <ul>
+                {{#each friend as |friend|}}
+                    <span
+                        style='display: inline-block; vertical-align: middle;'
+                    >{{friend.id}}</span>
+                    <button
+                        style='display: inline-block; vertical-align: middle;'
+                    >edit</button><button
+                        style='display: inline-block; vertical-align: middle;'
+                    >delete</button>
+                {{/each}}
+            </ul>
         </div>
-        <div class="col-2">
+    </div>
+    <div class='row justify-content-center'>
+        <div class='col'>
+
             <h4>ENTER A NEW FRIEND</h4>
-                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button">Button</button>
+            <input
+                type='text'
+                class='form-control'
+                placeholder="Recipient's username"
+                aria-label="Recipient's username"
+                aria-describedby='basic-addon2'
+            />
+            <div class='input-group-append'>
+                <button
+                    class='btn btn-outline-secondary'
+                    type='button'
+                >Button</button>
             </div>
         </div>
     </div>
