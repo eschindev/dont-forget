@@ -5,7 +5,7 @@
         <div class='edit-friend'>
             <h2 class='page-title'>Edit Friend</h2>
 
-            <form class='edit-friend-form' data-friend-id={{friend_id}}>
+            <form class='edit-family-member-form' data-friend-id={{friend_id}}>
 
                 <div class='form-group'>
                     <label for='example'>Name</label>
@@ -15,6 +15,7 @@
                         id='name_input'
                         aria-describedby='emailHelp'
                         placeholder='First Name'
+                        value='{{name}}'
                     />
                 </div>
                 <div class='form-group'>
@@ -25,17 +26,19 @@
                         id='email_input'
                         aria-describedby='emailHelp'
                         placeholder='Enter email'
+                        value='{{familyMember.email}}'
                     />
                 </div>
                 {{! pets question? }}
                 <div class='form-group'>
-                    <label for='example'>Pets??</label>
+                    <label for='example'>Pets</label>
                     <input
                         type='text'
                         class='form-control'
                         id='pets_input'
-                        aria-describedby='emailHelp'
+                        aria-describedby='example'
                         placeholder='Enter pets'
+                        value='{{familyMember.pets}}'
                     />
                 </div>
                 {{! what format }}
@@ -46,6 +49,7 @@
                         class='form-control'
                         id='birthday_input'
                         placeholder='Birthday'
+                        value='{{familyMember.birthday}}'
                     />
                 </div>
                 <div class='form-group'>
@@ -55,6 +59,7 @@
                         class='form-control'
                         id='career_input'
                         placeholder='Career'
+                        '{{familyMember.career}}'
                     />
                 </div>
                 <div class='form-group'>
@@ -64,11 +69,6 @@
                         id='comments_input'
                         rows='3'
                     ></textarea>
-                </div>
-                <div class='form-group'>
-
-                    <button class='btn btn-outline-secondary' type='button'>Edit
-                        a family member</button>
                 </div>
             </form>
         </div>

@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Friend extends Model {}
+class Friend extends Model { }
 
 Friend.init(
   {
@@ -12,16 +12,16 @@ Friend.init(
       autoIncrement: true,
     },
     name: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     birthday: {
-        type: DataTypes.STRING,
-        allowNull: true,
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     significant_other: {
-        type: DataTypes.STRING,
-        allowNull: true,
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     phone: {
       type: DataTypes.STRING,
@@ -36,16 +36,16 @@ Friend.init(
       allowNull: true,
     },
     photo: {
-        type: DataTypes.BLOB,
-        allowNull: true,
+      type: DataTypes.BLOB,
+      allowNull: true,
     },
-     user_id: {
-       type: DataTypes.INTEGER,
-       references: {
-         model: 'user',
-         key: 'id',
-       },
-     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,

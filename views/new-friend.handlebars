@@ -2,39 +2,55 @@
 
 <div class='row'>
     <div class='mx-auto col-10 col-md-8 col-lg-6'>
-        <form>
+        <form class="add-friend-form">
 
             <div class='form-group'>
-                <label for='example'>First Name</label>
-                <input
-                    type='text'
-                    class='form-control'
-                    id='first_name_input'
-                    aria-describedby='emailHelp'
-                    placeholder='First Name'
-                />
-            </div>
-            <div class='form-group'>
-                <label for='example'>Last Name</label>
+                <label for='example'>Name</label>
                 <input
                     type='text'
                     class='form-control'
                     id='last_name_input'
-                    aria-describedby='emailHelp'
+                    aria-describedby='example'
                     placeholder='Last Name'
                 />
+            </div>                        
+            <div class='form-group'>
+                <label for='example'>Birthday</label>
+                <input
+                    type='text'
+                    class='form-control'
+                    id='birthday_input'
+                    placeholder='Enter Birthday'
+                />
+                </div>
+                <div class='form-group'>
+                <label for='example'>Signficant Other</label>
+                <input
+                    type='text'
+                    class='form-control'
+                    id='significant_other_input'
+                    placeholder='Birthday'
+                />
             </div>
-
             <div class='form-group'>
                 <label for='example'>Email address</label>
                 <input
                     type='email'
                     class='form-control'
                     id='email_input'
-                    aria-describedby='emailHelp'
+                    aria-describedby='example'
                     placeholder='Enter email'
                 />
-            </div>
+            </div>                        
+            <div class='form-group'>
+                <label for='example'>Phone</label>
+                <input
+                    type='email'
+                    class='form-control'
+                    id='phone_input'
+                    aria-describedby='example'
+                    placeholder='Enter phone'
+                />
             {{! pets question? }}
             <div class='form-group'>
                 <label for='example'>Pets??</label>
@@ -45,21 +61,11 @@
                     aria-describedby='emailHelp'
                     placeholder='Enter pets'
                 />
-            </div>
-            {{! what format }}
-            <div class='form-group'>
-                <label for='example'>Birthday</label>
-                <input
-                    type='integer'
-                    class='form-control'
-                    id='birthday_input'
-                    placeholder='Birthday'
-                />
-            </div>
+            </div>                      
             <div class='form-group'>
                 <label for='example'>Career</label>
                 <input
-                    type='integer'
+                    type='text'
                     class='form-control'
                     id='career_input'
                     placeholder='Career'
@@ -73,6 +79,10 @@
                     rows='3'
                 ></textarea>
             </div>
+            <div class='form-group'>
+                    
+                    <button class="btn btn-outline-secondary" type="button">Add a family member</button>
+                </div>
         </form>
     </div>
 </div>
