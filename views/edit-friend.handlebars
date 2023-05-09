@@ -1,12 +1,82 @@
- <form>
-{{!-- grab one?  grab all? --}}
-            <div class='form-group'>
-                <label for='example'>Chosen Field</label>
-                <input
-                    type='text'
-                    class='form-control'
-                    id='name'
-                    aria-describedby='describe'
-                    placeholder='Name'
-                />
-            </div>
+<div class='row'>
+    <div
+        class='col-10 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center'
+    >
+        <div class='edit-friend'>
+            <h2 class='page-title'>Edit Friend</h2>
+
+            <form>
+
+                <div class='form-group'>
+                    <label for='example'>First Name</label>
+                    <input
+                        type='text'
+                        class='form-control'
+                        id='first_name_input'
+                        aria-describedby='emailHelp'
+                        placeholder='First Name'
+                    />
+                </div>
+                <div class='form-group'>
+                    <label for='example'>Last Name</label>
+                    <input
+                        type='text'
+                        class='form-control'
+                        id='last_name_input'
+                        aria-describedby='emailHelp'
+                        placeholder='Last Name'
+                    />
+                </div>
+
+                <div class='form-group'>
+                    <label for='example'>Email address</label>
+                    <input
+                        type='email'
+                        class='form-control'
+                        id='email_input'
+                        aria-describedby='emailHelp'
+                        placeholder='Enter email'
+                    />
+                </div>
+                {{! pets question? }}
+                <div class='form-group'>
+                    <label for='example'>Pets??</label>
+                    <input
+                        type='text'
+                        class='form-control'
+                        id='pets_input'
+                        aria-describedby='emailHelp'
+                        placeholder='Enter pets'
+                    />
+                </div>
+                {{! what format }}
+                <div class='form-group'>
+                    <label for='example'>Birthday</label>
+                    <input
+                        type='integer'
+                        class='form-control'
+                        id='birthday_input'
+                        placeholder='Birthday'
+                    />
+                </div>
+                <div class='form-group'>
+                    <label for='example'>Career</label>
+                    <input
+                        type='integer'
+                        class='form-control'
+                        id='career_input'
+                        placeholder='Career'
+                    />
+                </div>
+                <div class='form-group'>
+                    <label for='example'>Additional comments</label>
+                    <textarea
+                        class='form-control'
+                        id='comments_input'
+                        rows='3'
+                    ></textarea>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
