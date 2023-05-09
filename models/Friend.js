@@ -39,6 +39,13 @@ Friend.init(
       type: DataTypes.BLOB,
       allowNull: true,
     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
