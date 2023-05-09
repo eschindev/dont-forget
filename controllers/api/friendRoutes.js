@@ -3,6 +3,10 @@ const { Friend } = require("../../models");
 
 router.post("/", async (req, res) => {
   try {
+    if (req.body.photo) {
+      req.body.photo = Buffer.from(req.body.photo, "base64");
+    }
+
     const friendData = await Friend.create(req.body);
 
     if (!friendData) {
@@ -19,6 +23,10 @@ router.post("/", async (req, res) => {
 
 router.put("/:id", async (req, res) => {
   try {
+    if (req.body.photo) {
+      req.body.photo = Buffer.from(req.body.photo, "base64");
+    }
+
     const friendData = await Friend.update(req.body, {
       where: {
         id: req.params.id,

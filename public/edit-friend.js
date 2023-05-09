@@ -10,6 +10,20 @@ const editFriendFormHandler = async (event) => {
   const email = document.querySelector("#email_input").value.trim();
   const address = document.querySelector("#address_input").value.trim();
   const friendId = window.location.pathname.split("/")[2];
+  const photoInput = document.querySelector("#photo_input");
+
+  let photo;
+
+  if (photoInput.files[0]) {
+    try {
+      photo = await readFileAsBase64(photoInput.files[0]);
+    } catch (err) {
+      console.log(
+        "Failed to upload photo. Please check file format and try again."
+      );
+      return;
+    }
+  }
 
   if (Number.isInteger(friendId)) {
     const response = await fetch(`/api/friend/${friendId}`, {
@@ -21,6 +35,7 @@ const editFriendFormHandler = async (event) => {
         phone,
         email,
         address,
+        photo,
       }),
       headers: { "Content-Type": "application/json" },
     });
@@ -32,6 +47,17 @@ const editFriendFormHandler = async (event) => {
     }
   }
 };
+
+function readFileAsBase64(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      resolve(reader.result.split(",")[1]);
+    };
+    reader.onerror = (error) => reject(error);
+  });
+}
 
 document
   .querySelector(".edit-friend-form")
