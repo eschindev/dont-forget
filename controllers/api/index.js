@@ -7,5 +7,4 @@ router.use("/friend", friendRoutes);
 router.use("/familyMember", familyMemberRoutes);
 router.use("/user", userRoutes);
 
-
 module.exports = router;
