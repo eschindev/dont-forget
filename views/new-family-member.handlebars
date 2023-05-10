@@ -1,87 +1,45 @@
-<h1>ADD A FAMILY MEMBER</h1>
+<h1>Add a new Family Member</h1>
 
-<div class='row'>
-    <div class='mx-auto col-10 col-md-8 col-lg-6'>
-        <form action='/target' class='dropzone'></form>
-        <form class='add-family-member'>
+<div class="row">
+  <div class="mx-auto col-10 col-md-8 col-lg-6">
+    <form action="/target" class="dropzone"></form>
+    <form class="form add-family-member-form" data-friend-id="{{friend_id}}">
 
-            <div class='form-group'>
-                <label for='example'>Name</label>
-                <input
-                    type='text'
-                    class='form-control'
-                    id='name_input'
-                    aria-describedby='emailHelp'
-                    placeholder='Name'
-                    value='{{name}}'
-                />
-            </div>
+      <div class="form-group">
+        <label for="example">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name_input"
+          aria-describedby="emailHelp"
+          placeholder="Name"
+        />
+      </div>
 
-            <div class='form-group'>
-                <label for='example'>Email address</label>
-                <input
-                    type='email'
-                    class='form-control'
-                    id='email_input'
-                    aria-describedby='emailHelp'
-                    placeholder='Enter email'
-                    value='{{familyMember.email}}'
-                />
-            </div>
-            {{! pets question? }}
-            <div class='form-group'>
-                <label for='example'>Pets??</label>
-                <input
-                    type='text'
-                    class='form-control'
-                    id='pets_input'
-                    aria-describedby='emailHelp'
-                    placeholder='Enter pets'
-                    value='{{familyMember.pets}}'
-                />
-            </div>
-            {{! what format }}
-            <div class='form-group'>
-                <label for='example'>Birthday</label>
-                <input
-                    type='text'
-                    class='form-control'
-                    id='birthday_input'
-                    placeholder='Birthday'
-                />
-            </div>
-            <div class='form-group'>
-                <label for='example'>Career</label>
-                <input
-                    type='text'
-                    class='form-control'
-                    id='career_input'
-                    placeholder='Career'
-                    value='{{familyMember.birthday}}'
-                />
-            </div>
-            <input
-                type='text'
-                class='form-control'
-                id='career_input'
-                placeholder='Career'
-                value='{{familyMember.career}}'
-            />
-            <div class='form-group'>
-                <label for='example'>Additional comments</label>
-                <textarea
-                    class='form-control'
-                    id='comments_input'
-                    rows='3'
-                    value='{{familyMember.comments}}'
-                ></textarea>
-            </div>
-            <div class='input-group-append'>
-                <a href='friend'><button
-                        class='btn btn-outline-secondary'
-                        type='button'
-                    >Save Family</button></a>
-            </div>
-        </form>
-    </div>
+      <div class="form-group">
+        <label for="example">Relationship</label>
+        <input
+          type="text"
+          class="form-control"
+          id="relationship_input"
+          aria-describedby="emailHelp"
+          placeholder="Enter relationship"
+        />
+      </div>
+      <div class="form-group">
+        <label for="example">Birthday</label>
+        <input
+          type="text"
+          class="form-control"
+          id="birthday_input"
+          placeholder="Enter birthday"
+        />
+      </div>
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="submit">Save Family
+          Member</button>
+      </div>
+    </form>
+  </div>
 </div>
+<script src="/new-family-member.js"></script>

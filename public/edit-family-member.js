@@ -5,9 +5,11 @@ const editFamilyMemberFormHandler = async (event) => {
   const birthday = document.querySelector("#birthday_input").value.trim();
   const fam_rel = document.querySelector("#relationship_input").value.trim();
   const familyMemberId = window.location.pathname.split("/")[2];
-  const friend_id = parseInt(
-    document.querySelector("#edit-family-member-form").dataset.friendId
-  );
+  const friend_id = document.querySelector(".edit-family-member-form").dataset
+    .friendId;
+
+  console.log(familyMemberId);
+  console.log(friend_id);
 
   if (fam_name) {
     const response = await fetch(`/api/familyMember/${familyMemberId}`, {

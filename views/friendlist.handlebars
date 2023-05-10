@@ -5,21 +5,27 @@
 
     <ul class="team">
       {{#each friends as |friend|}}
+        <hr />
         <li class="member co-funder">
           <div class="thumb">
-            <img src="{{friend.photo}}" height="200" width="200" />
+            {{#if friend.photo}}
+              <img src="{{friend.photo}}" height="200" width="200" />
+            {{else}}
+              <img src="/images/defaultPhoto.jpg" height="200" width="200" />
+            {{/if}}
           </div>
           <div class="description">
             <a href="/friend/{{friend.id}}"><h3>{{friend.name}}</h3></a>
             <p>Birthday: {{friend.birthday}}</p>
             <p>Significant Other: {{friend.significant_other}}</p>
             <p>Phone: {{friend.phone}}</p>
-            <a href="/friend/{{friend.id}}/edit">edit</a>
-            <a
-              href="#"
-              class="delete-button"
+            <a href="/friend/{{friend.id}}/edit"><button
+                class="btn"
+              >edit</button></a>
+            <button
+              class="delete-button btn"
               data-friend-id="{{friend.id}}"
-            >delete</a>
+            >delete</button>
           </div>
         </li>
       {{/each}}
@@ -30,5 +36,5 @@
   </div>
 
 </body>
-<script src="logout.js"></script>
-<script src="delete-friend.js"></script>
+<script src="/logout.js"></script>
+<script src="/delete-friend.js"></script>

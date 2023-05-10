@@ -16,7 +16,10 @@ router.get("/:id/edit", withAuth, async (req, res) => {
 
     const friend = friendData.get({ plain: true });
 
-    res.render("edit-friend", friend);
+    res.render("edit-friend", {
+      friend,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
