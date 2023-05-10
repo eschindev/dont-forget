@@ -1,35 +1,124 @@
-<section class='container'>
-    <h3 class='all-friend-page'>{{User.username}}</h3>
-    <h4>Edit Friends/Family</h4>
-    <div class='row justify-content-center'>
-        <div class='col'>
-            {{! check here }}
-            <ul>
-                {{#each friend as |friend|}}
-                    <span
-                        style='display: inline-block; vertical-align: middle;'
-                    >{{friend.id}}</span>
-                    <button
-                        style='display: inline-block; vertical-align: middle;'
-                    >edit</button><button
-                        style='display: inline-block; vertical-align: middle;'
-                    >delete</button>
-                {{/each}}
-            </ul>
-        </div>
-    </div>
-    <div class='row justify-content-center'>
-        <div class='col'>
+<body id='body'>
+    <link rel='stylesheet' type='text/css' href='/public/css/reset.css' />
+    <div class='content'>
+        <h1>My Friends</h1>
 
-            <h4>ENTER A NEW FRIEND</h4>
-
-            <div class='input-group-append'>
-                <a href='friend'><button
-                        class='btn btn-outline-secondary'
-                        type='button'
-                    >Button</button></a>
+        <ul class='team'>
+            <li class='member co-funder'>
+                <div class='thumb'><img
+                        src='https://assets.codepen.io/3/internal/avatars/users/default.png?fit=crop&format=auto&height=120&width=120'
+                    />
+                </div>
+                <div class='description'>
+                    <h3>Chris Coyier</h3>
+                    <p>Chris is a front-end developer and designer. He writes a
+                        bunch of HTML, CSS, and JavaScript and shakes the
+                        pom-poms for CodePen.<br /><a
+                            href='https://codepen.io/quezo/'
+                        >edit</a><a href='https://codepen.io/quezo/'>delete</a>
+                    </p>
+                </div>
+            </li>
+            <li class='member co-funder'>
+                <div class='thumb'><img
+                        src='https://assets.codepen.io/2/internal/avatars/users/default.png?height=120&width=120'
+                    /></div>
+                <div class='description'>
+                    <h3>Alex Vazquez</h3>
+                    <p>Alex is a full stack developer. Alex does JavaScript
+                        development for CodePen, both front end and back, and
+                        just about everything else.<br /><a
+                            href='https://codepen.io/quezo/'
+                        >edit</a><a
+                            href='https://codepen.io/quezo/'
+                        >delete</a></p>
+                </div>
+            </li>
+            <li class='member'>
+                <div class='thumb'><img
+                        src='https://assets.codepen.io/652/internal/avatars/users/default.png?height=120&width=120'
+                    />
+                </div>
+                <div class='description'>
+                    <h3>Marie Mosley</h3>
+                    <p>Marie wears a lot of hats. She is our documentation lead,
+                        customer support maestra, editor, and community manager.<br
+                        /><a href='https://codepen.io/quezo/'>edit</a><a
+                            href='https://codepen.io/quezo/'
+                        >delete</a></p>
+                </div>
+            </li>
+            <li class='member'>
+                <div class='thumb'><img
+                        src='https://assets.codepen.io/39255/internal/avatars/users/default.png?height=120&width=120'
+                    />
+                </div>
+                <div class='description'>
+                    <h3>Stephen Shaw</h3>
+                    <p>Stephen is a designer/developer residing in Houston. He
+                        likes to build animations with CSS & JavaScript.<br /><a
+                            href='https://codepen.io/quezo/'
+                        >edit</a><a
+                            href='https://codepen.io/quezo/'
+                        >delete</a></p>
+                </div>
+            </li>
+            <li class='member'>
+                <div class='thumb'><img
+                        src='https://cpwebassets.codepen.io/assets/packs/about-rachelsmith-6878ca76a1d9200e6c296e810050b8cb.jpg?height=120&width=120'
+                    />
+                </div>
+                <div class='description'>
+                    <h3>Rachel Smith</h3>
+                    <p>Rachel is a full stack'er in Australia. Not only a
+                        creative and talented designer and developer, but a
+                        great technical writer.<br /><a
+                            href='https://codepen.io/quezo/'
+                        >edit</a><a
+                            href='https://codepen.io/quezo/'
+                        >delete</a></p>
+                </div>
+            </li>
+            <li class='member'>
+                <div class='thumb'><img
+                        src='https://cpwebassets.codepen.io/assets/packs/about-robertkieffer-77c28f3a6efe082fd1903affae540b8a.jpg?height=120'
+                    />
+                </div>
+                <div class='description'>
+                    <h3>Robert Kieffer</h3>
+                    <p>Robert is a full-stack dev with a penchant for
+                        open-source work. He dwells in the murky depthsmurky
+                        depths of JS.<br /><a
+                            href='https://codepen.io/quezo/'
+                        >edit</a><a
+                            href='https://codepen.io/quezo/'
+                        >delete</a></p>
+                </div>
+            </li>
+            <li class='member'>
+                <div class='thumb'><img
+                        src='https://cpwebassets.codepen.io/assets/packs/about-deevazquez-c8e8b7f9e803f462b7be19ea60b9272f.jpg?height=120&width=120'
+                    />
+                </div>
+                <div class='description'>
+                    <h3>Dee Vazquez</h3>
+                    <p>Dee is a full stack developer who started her career in
+                        finance. She can jump from Rails to React to Go, and
+                        also manage our finances.<br /><a
+                            href='https://codepen.io/quezo/'
+                        >edit</a><a
+                            href='https://codepen.io/quezo/'
+                        >delete</a></p>
+                </div>
+            </li>
+        </ul>
+        <form>
+            <div class='form-group'>
+                <h4>ADD NEW FRIEND</h4>
+                <button class='btn btn-primary' type='submit'>Submit</button>
             </div>
-        </div>
+        </form>
     </div>
 
-</section>
+</body>
+<script src='friend'></script>

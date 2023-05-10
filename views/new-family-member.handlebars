@@ -13,6 +13,7 @@
                     id='name_input'
                     aria-describedby='emailHelp'
                     placeholder='Name'
+                    value='{{name}}'
                 />
             </div>
 
@@ -24,6 +25,7 @@
                     id='email_input'
                     aria-describedby='emailHelp'
                     placeholder='Enter email'
+                    value='{{familyMember.email}}'
                 />
             </div>
             {{! pets question? }}
@@ -35,13 +37,14 @@
                     id='pets_input'
                     aria-describedby='emailHelp'
                     placeholder='Enter pets'
+                    value='{{familyMember.pets}}'
                 />
             </div>
             {{! what format }}
             <div class='form-group'>
                 <label for='example'>Birthday</label>
                 <input
-                    type='integer'
+                    type='text'
                     class='form-control'
                     id='birthday_input'
                     placeholder='Birthday'
@@ -50,18 +53,27 @@
             <div class='form-group'>
                 <label for='example'>Career</label>
                 <input
-                    type='integer'
+                    type='text'
                     class='form-control'
                     id='career_input'
                     placeholder='Career'
+                    value='{{familyMember.birthday}}'
                 />
             </div>
+            <input
+                type='text'
+                class='form-control'
+                id='career_input'
+                placeholder='Career'
+                value='{{familyMember.career}}'
+            />
             <div class='form-group'>
                 <label for='example'>Additional comments</label>
                 <textarea
                     class='form-control'
                     id='comments_input'
                     rows='3'
+                    value='{{familyMember.comments}}'
                 ></textarea>
             </div>
             <div class='input-group-append'>
