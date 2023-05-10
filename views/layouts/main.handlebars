@@ -1,29 +1,29 @@
-<html lang='en'>
+<html lang="en">
 
-    <head>
-        <meta charset='utf-8' />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link
-            rel='stylesheet'
-            href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
-        />
-        {{!-- <link rel='stylesheet' type='text/css' href='/css/reset.css' />  --}}
-        <link rel='stylesheet' type='text/css' href='/css/style.css' />
-    </head>
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    {{! <link rel='stylesheet' type='text/css' href='/css/reset.css' />  }}
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
 
-    <body>
+  <body>
 
-        <div class='container'>
-            <div>
-                <img src="/public/images/Don_t_Forget_Logo-removebg-preview.jpg">
-            </div>
-            {{> nav-bar}}
-            {{{body}}}
-        </div>
-
-        <script
-            src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'
-        ></script>
-    </body>
+    <div class="container">
+      {{> nav-bar}}
+    </div>
+    {{{body}}}
+    <script
+      src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    ></script>
+    <script
+      src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+  </body>
 </html>

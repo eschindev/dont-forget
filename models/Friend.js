@@ -1,7 +1,7 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
-class Friend extends Model { }
+class Friend extends Model {}
 
 Friend.init(
   {
@@ -29,21 +29,21 @@ Friend.init(
     },
     email: {
       type: DataTypes.STRING,
-      allowNull: true
+      allowNull: true,
     },
     address: {
       type: DataTypes.STRING,
       allowNull: true,
     },
     photo: {
-      type: DataTypes.BLOB,
+      type: DataTypes.BLOB("medium"),
       allowNull: true,
     },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
-        key: 'id',
+        model: "user",
+        key: "id",
       },
     },
   },
@@ -52,7 +52,7 @@ Friend.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'friend',
+    modelName: "friend",
   }
 );
 

@@ -1,13 +1,25 @@
-const Dropzone = require("dropzone");
-
 let photo;
 
-const myDropzone = new Dropzone(".dropzone", {
-  autoProcessQueue: false,
-  paramName: "photo",
-  acceptedFiles: "image/*",
-  maxFiles: 1,
-  createImageThumbnails: false,
+document.addEventListener("DOMContentLoaded", () => {
+  const myDropzone = Dropzone.forElement(".dropzone");
+  myDropzone.url = "/api/upload";
+  myDropzone.autoProcessQueue = false;
+  myDropzone.paramName = "photo";
+  myDropzone.acceptedFiles = "image/*";
+  myDropzone.maxFiles = 1;
+  myDropzone.createImageThumbnails = true;
+
+  myDropzone.on("addedfile", (file) => {
+    document.querySelector("#submit-button").disabled = true;
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      photo = event.target.result.split(",")[1];
+
+      document.querySelector("#submit-button").disabled = false;
+    };
+    reader.readAsDataURL(file);
+  });
 });
 
 const editFriendFormHandler = async (event) => {
@@ -50,18 +62,6 @@ const editFriendFormHandler = async (event) => {
     }
   }
 };
-
-myDropzone.on("addedfile", (file) => {
-  document.querySelector("#submit-button").disabled = true;
-
-  const reader = new FileReader();
-  reader.onload = (event) => {
-    photo = event.target.result.split(",")[1];
-
-    document.querySelector("#submit-button").disabled = false;
-  };
-  reader.readAsDataURL(file);
-});
 
 document
   .querySelector(".edit-friend-form")
