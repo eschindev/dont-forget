@@ -1,77 +1,51 @@
-<div class='row'>
-    <div
-        class='col-10 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center'
-    >
-        <div class='edit-friend'>
-            <h2 class='page-title'>Edit Friend</h2>
-            <form action='/target' class='dropzone'></form>
-            <form class='edit-family-member-form' data-friend-id={{friend_id}}>
+<h1>Edit {{familyMember.name}}</h1>
 
-                <div class='form-group'>
-                    <label for='example'>Name</label>
-                    <input
-                        type='text'
-                        class='form-control'
-                        id='name_input'
-                        aria-describedby='emailHelp'
-                        placeholder='Name'
-                        value='{{name}}'
-                    />
-                </div>
-                <div class='form-group'>
-                    <label for='example'>Email address</label>
-                    <input
-                        type='email'
-                        class='form-control'
-                        id='email_input'
-                        aria-describedby='emailHelp'
-                        placeholder='Enter email'
-                        value='{{familyMember.email}}'
-                    />
-                </div>
-                {{! pets question? }}
-                <div class='form-group'>
-                    <label for='example'>Pets</label>
-                    <input
-                        type='text'
-                        class='form-control'
-                        id='pets_input'
-                        aria-describedby='example'
-                        placeholder='Enter pets'
-                        value='{{familyMember.pets}}'
-                    />
-                </div>
-                {{! what format }}
-                <div class='form-group'>
-                    <label for='example'>Birthday</label>
-                    <input
-                        type='text'
-                        class='form-control'
-                        id='birthday_input'
-                        placeholder='Birthday'
-                        value='{{familyMember.birthday}}'
-                    />
-                </div>
-                <div class='form-group'>
-                    <label for='example'>Career</label>
-                    <input
-                        type='text'
-                        class='form-control'
-                        id='career_input'
-                        placeholder='Career'
-                        value='{{familyMember.career}}'
-                    />
-                </div>
-                <div class='form-group'>
-                    <label for='example'>Additional comments</label>
-                    <textarea
-                        class='form-control'
-                        id='comments_input'
-                        rows='3'
-                        value='{{familyMember.comments}}'
-                    ></textarea>
-                </div>
-            </form>
-        </div>
-    </div>
+<div class="row">
+  <div class="mx-auto col-10 col-md-8 col-lg-6">
+    <form action="/target" class="dropzone"></form>
+    <form
+      class="form edit-family-member-form"
+      data-friend-id="{{familyMember.friend.id}}"
+    >
+
+      <div class="form-group">
+        <label for="example">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name_input"
+          aria-describedby="emailHelp"
+          placeholder="Name"
+          value="{{familyMember.fam_name}}"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="example">Relationship</label>
+        <input
+          type="text"
+          class="form-control"
+          id="relationship_input"
+          aria-describedby="emailHelp"
+          placeholder="Enter relationship"
+          value="{{familyMember.fam_rel}}"
+        />
+      </div>
+      <div class="form-group">
+        <label for="example">Birthday</label>
+        <input
+          type="text"
+          class="form-control"
+          id="birthday_input"
+          placeholder="Enter birthday"
+          value="{{familyMember.birthday}}"
+        />
+      </div>
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="submit">Save Family
+          Member</button>
+      </div>
+    </form>
+  </div>
 </div>
+<script src="/edit-family-member.js"></script>

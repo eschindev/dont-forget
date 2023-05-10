@@ -5,8 +5,10 @@ const newFamilyMemberFormHandler = async (event) => {
   const birthday = document.querySelector("#birthday_input").value.trim();
   const fam_rel = document.querySelector("#relationship_input").value.trim();
   const friend_id = parseInt(
-    document.querySelector("#add-family-member-form").dataset.friendId
+    document.querySelector(".add-family-member-form").dataset.friendId
   );
+
+  console.log(document.querySelector("#add-family-member-form"));
 
   if (fam_name) {
     const response = await fetch(`/api/familyMember/`, {
