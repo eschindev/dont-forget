@@ -29,19 +29,6 @@ router.get("/:id", withAuth, async (req, res) => {
         {
           model: FamilyMember,
         },
-        // nice to have models we'll build out after establishing our MVP
-        // {
-        //   model: Pet,
-        // },
-        // {
-        //   model: Job,
-        // },
-        // {
-        //   model: Hobby,
-        // },
-        // {
-        //   model: Note,
-        // },
       ],
     });
 
@@ -54,6 +41,8 @@ router.get("/:id", withAuth, async (req, res) => {
       )}`;
       friend.photo = photoDataUri;
     }
+
+    console.log(friend);
 
     res.render("friend", {
       friend,

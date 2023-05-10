@@ -1,71 +1,57 @@
-<link
-    href='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css'
-    rel='stylesheet'
-    id='bootstrap-css'
-/>
-<script
-    src='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js'
-></script>
-<script
-    src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'
-></script>
-<nav class='navbar navbar-expand-lg navbar-red navbar-dark'>
-    <div class='wrapper'>
-
-    </div>
-    <div class='container-fluid all-show'>
-        <a class='navbar-brand' href='#'>Don't Forget!
-            <i class='fa fa-codepen'></i></a>
-        
-
-            </div>
-        </div>
-    </div>
-</nav>
 <div class="container login-container">
-            <div class="row">
-                <div class="col-md-6 login-form-1">
-                    <h3>Login</h3>
-                    
-                        <div class="form-group">
-                            <input type="text" class="form-control"
-                            id="username-login" placeholder="Username *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control"
-                            id="password-login" placeholder="Your Password *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" class="btnSubmit" id="login-btn" value="Login" />
-                        </div>
-                        <div class="form-group">
-                            {{!-- <a href="#" class="btnForgetPwd">Forget Password?</a> --}}
-                        </div>
-                    
-                </div>
-                <div class="col-md-6 login-form-2">
-                    <div class="login-logo">
-                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
-                    </div>
-                    <h3>Create Account</h3>
-                        <div class="form-group signup-form">
-                            <input type="text" class="form-control" 
-                            id="username-signup placeholder="Username *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" 
-                            id="password-signup"
-                            placeholder="Create Password *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" class="btnSubmit" value="Login" />
-                        </div>
-                        <div class="form-group">
-
-                            <a href="#" class="btnForgetPwd" value="Login">Forget Password?</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
+  <div class="row">
+    <div class="col-md-6 login-form-1">
+      <h3>Login</h3>
+      <form class="form login-form">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            id="username-login"
+            placeholder="Username *"
+            value=""
+          />
         </div>
-        <script src="login.js"></script>
+        <div class="form-group">
+          <input
+            type="password"
+            class="form-control"
+            id="password-login"
+            placeholder="Password *"
+            value=""
+          />
+        </div>
+        <div class="form-group">
+          <input type="submit" class="btnSubmit" id="login-btn" value="Login" />
+        </div>
+      </form>
+    </div>
+    <div class="col-md-6 login-form-2">
+      <h3>Create Account</h3>
+      <form class="form signup-form">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            id="username-signup"
+            placeholder="Username *"
+            value=""
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            class="form-control"
+            id="password-signup"
+            placeholder="Password *"
+            value=""
+          />
+        </div>
+        <div class="form-group">
+          <input type="submit" class="btnSubmit" value="Login" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="login.js"></script>

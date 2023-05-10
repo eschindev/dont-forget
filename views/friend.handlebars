@@ -1,30 +1,10 @@
-{{!-- <div class='row'>
-    <div
-        class='col-10 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center'
-    >
-        <section class='single-friend'>
-
-            <div class='single-friend-details'>
-                <h3>{{friend.name}}</h3>
-                <p> Birthday{{friend.birthday}}</p>
-                <p> Significant Other{{friend.significant_others}}</p>
-                <p> Phone{{friend.phone}}</p>
-                <p> Email{{friend.email}}</p>
-                <p> Address{{friend.address}}</p>
-            </div>
-        </section>
-    </div>
-</div> --}}
-
 <body id="card-body">
-
-
-
-
     <article>
         <figure><img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREJPHyIrQat98qZgIrMqSYLLkOYHJIC0TLFw&usqp=CAU"
-                alt="">
+                src="{{friend.photo}}"
+                alt="photo of {{friend.name}}"
+                height="200"
+                width="200">
             
         </figure>
         <h2>{{friend.name}}</h2>
@@ -33,7 +13,14 @@
             <p>Pets</p>
     </article>
 
-    <h1>:hover</h1>
+    <h3>Family Members</h3>
+    <ul>
+        {{#each friend.familyMembers as |familyMember|}}
+        <li>
+            <p>Name: {{familyMember.name}}</p>
+        </li>
+        {{/each}}
+    </ul>
 </body>
 
 </html>

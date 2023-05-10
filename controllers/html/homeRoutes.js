@@ -5,6 +5,7 @@ const withAuth = require("../../utils/auth");
 router.get("/", async (req, res) => {
   try {
     if (req.session.logged_in) {
+      console.log("1");
       const friendData = await Friend.findAll({
         where: {
           user_id: req.session.user_id,
@@ -12,17 +13,18 @@ router.get("/", async (req, res) => {
         order: [["name", "ASC"]],
       });
 
-      const friendsTemp = friendData.map((friend) => {
-        friend.get({ plain: true });
-      });
+      const friends = friendData.map((friend) => {
+        const tempFriend = friend.get({ plain: true });
 
-      const friends = friendsTemp.map((friend) => {
-        const photoBuffer = friend.photo;
-        const photoDataUri = `data:image/png;base64,${photoBuffer.toString(
-          "base64"
-        )}`;
-        friend.photo = photoDataUri;
-        return friend;
+        if (tempFriend.photo) {
+          const photoBuffer = tempFriend.photo;
+          const photoDataUri = `data:image/png;base64,${photoBuffer.toString(
+            "base64"
+          )}`;
+          tempFriend.photo = photoDataUri;
+        }
+
+        return tempFriend;
       });
 
       res.render("friendlist", {
@@ -33,7 +35,8 @@ router.get("/", async (req, res) => {
       res.render("login");
     }
   } catch (err) {
-    res.status(500).json(err);
+    console.log(err);
+    res.status(500).json({ message: "failed to load friendlist." });
   }
 });
 

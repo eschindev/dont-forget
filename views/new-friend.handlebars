@@ -1,112 +1,91 @@
-{{!-- <link
-    rel='stylesheet'
-    href='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/dropzone.min.css'
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/dropzone.min.css"
 />
 
-<h1>ADD A FRIEND</h1>
+<div class="row">
+  <div
+    class="col-10 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center"
+  >
+    <div class="add-friend">
+      <h2 class="page-title">Edit Friend</h2>
+      <form action="/api/upload" class="dropzone"></form>
+      <form class="add-friend-form" data-user-id={{user_id}}>
 
-<div class='row'>
-    <div class='mx-auto col-10 col-md-8 col-lg-6'>
-        <form class='add-friend-form'>
-            <form action='/target' class='dropzone'></form>
+        <div class="form-group">
+          <label for="example">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name_input"
+            aria-describedby="emailHelp"
+            placeholder="First Name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="example">Birthday</label>
+          <input
+            type="text"
+            class="form-control"
+            id="birthday_input"
+            placeholder="Birthday"
+          />
+        </div>
+        <div class="form-group">
+          <label for="example">Significant Other</label>
+          <input
+            type="text"
+            class="form-control"
+            id="significant_other_input"
+            placeholder="Enter significant other"
+          />
+        </div>
+        <div class="form-group">
+          <label for="example">Phone</label>
+          <input
+            type="text"
+            class="form-control"
+            id="phone_input"
+            placeholder="Enter phone number"
+          />
+        </div>
+        <div class="form-group">
+          <label for="example">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email_input"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="example">Address</label>
+          <input
+            type="text"
+            class="form-control"
+            id="address_input"
+            placeholder="Enter Address"
+          />
+        </div>
+        <div class="form-group">
 
-            <div class='form-group'>
-                <label for='example'>Name</label>
-                <input
-                    type='text'
-                    class='form-control'
-                    id='last_name_input'
-                    aria-describedby='example'
-                    placeholder='Last Name'
-                />
-            </div>
-            <div class='form-group'>
-                <label for='example'>Birthday</label>
-                <input
-                    type='text'
-                    class='form-control'
-                    id='birthday_input'
-                    placeholder='Enter Birthday'
-                />
-            </div>
-            <div class='form-group'>
-                <label for='example'>Signficant Other</label>
-                <input
-                    type='text'
-                    class='form-control'
-                    id='significant_other_input'
-                    placeholder='Birthday'
-                />
-            </div>
-            <div class='form-group'>
-                <label for='example'>Email address</label>
-                <input
-                    type='email'
-                    class='form-control'
-                    id='email_input'
-                    aria-describedby='example'
-                    placeholder='Enter email'
-                />
-            </div>
-            <div class='form-group'>
-                <label for='example'>Phone</label>
-                <input
-                    type='email'
-                    class='form-control'
-                    id='phone_input'
-                    aria-describedby='example'
-                    placeholder='Enter phone'
-                />
-                {{! pets question? }}
-                <div class='form-group'>
-                    <label for='example'>Pets??</label>
-                    <input
-                        type='text'
-                        class='form-control'
-                        id='pets_input'
-                        aria-describedby='emailHelp'
-                        placeholder='Enter pets'
-                    />
-                </div>
-                <div class='form-group'>
-                    <label for='example'>Career</label>
-                    <input
-                        type='text'
-                        class='form-control'
-                        id='career_input'
-                        placeholder='Career'
-                    />
-                </div>
-                <div class='form-group'>
-                    <label for='example'>Additional comments</label>
-                    <textarea
-                        class='form-control'
-                        id='comments_input'
-                        rows='3'
-                    ></textarea>
-                </div>
-
-                <div class='form-group'>
-                    <a href='/'><button
-                            class='new-friend-save-button'
-                            type='button'
-                        >SAVE FRIEND</button></a>
-                </div>
-
-                <a href='familyMember'><button
-                        id='submit-button'
-                        class='btn btn-outline-secondary'
-                        type='button'
-                    >Add a family member</button></a>
-            </div>
-        </form>
+          <button
+            id="submit-button"
+            class="btn btn-outline-primary"
+            type="submit"
+          >Save</button>
+        </div>
+      </form>
     </div>
+  </div>
 </div>
 <script
-    src='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/min/dropzone.min.js'
-></script> --}}
+  src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/min/dropzone.min.js"
+></script>
+<script src="new-friend.js"></script>
 
-<body id="input-body">
+{{! <body id="input-body">
 
     <ul>
         <li class="card" style="--color:#ececec; --bg-color:#CFF09E">
@@ -145,4 +124,4 @@
             <input type="text" id="name" name="name">
 
         </li>
-    </ul>
+    </ul> }}
