@@ -1,14 +1,3 @@
-:root {
-    --primary: #3d5852;
-    --secondary: #86938f;
-    --tertiary: #5e877f;
-
-    --light: #e3e4e3;
-    --dark: #182c23;
-    --error: rgb(228, 46, 1);
-    --border-radius: 0.3rem;
-}
-
 body {
     font-family: Arial;
     margin: 0;
@@ -17,87 +6,6 @@ body {
     min-height: 100vh;
     justify-content: flex-start;
     background-color: var(--quatrinary);
-}
-
-a {
-    color: var(--dark);
-    text-decoration: none;
-}
-
-a:visited {
-    color: inherit;
-}
-
-header {
-    padding: 40px;
-    text-align: center;
-    background: black;
-    color: var(--light);
-}
-
-main {
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    background-color: white;
-}
-
-nav {
-    display: flex;
-    background-color: yellow;
-}
-
-nav a {
-    color: var(--light);
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-}
-
-nav a:hover {
-    color: var(--secondary);
-    background-color: var(--dark);
-}
-
-.fill-forms {
-    flex: 4;
-    background-color: #fff;
-    padding: 50px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn-no-style {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 100%;
-    transition: color 0.1s;
-    margin-left: 16px;
-}
-
-img {
-    margin-top: 10px;
-    justify-content: center;
-    max-width: 100%;
-    height: auto;
-}
-
-.painting {
-    width: 50%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 25px;
-}
-
-.painting-details {
-    text-align: center;
-    padding: 10px 20px;
-    font-weight: bold;
 }
 
 /* CARDS */
@@ -110,7 +18,7 @@ img {
     color: var(--dark);
 }
 
-.login-card {
+/* .login-card {
     margin: 0 0 20px 0;
     flex: 0 0 50%;
     max-width: 50%;
@@ -121,7 +29,7 @@ img {
     border-width: thick;
     background-color: black;
     color: var(--light);
-}
+} */
 
 .card header {
     color: var(--light);
@@ -162,58 +70,6 @@ img {
 }
 @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
 
-body {
-    background-color: #eee;
-}
-
-.navbar-nav > li > a {
-    text-transform: uppercase;
-    font-size: 12px;
-    margin-right: 20px;
-    color: #fff;
-}
-
-.navbar-toggler {
-    padding: 0.2rem 0.5rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    background-color: transparent;
-    border: 1px solid white;
-}
-
-.nav-link {
-    color: #fff !important;
-}
-
-.wrapper {
-    width: 100%;
-    position: absolute;
-    height: 100%;
-    background-color: #000;
-    clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 71% 100%);
-    transition: 1s all;
-}
-
-.navbar-brand {
-    color: #fff;
-    font-family: 'Allerta Stencil', sans-serif;
-    margin-bottom: 4px;
-    font-size: 27px;
-}
-
-.navbar-red:hover .wrapper {
-    clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 65% 100%);
-}
-
-.navbar-brand:hover {
-    color: #fff;
-}
-
-.navbar-red {
-    background-color: black;
-    color: #fff;
-}
-
 .all-show {
     z-index: 10;
 }
@@ -221,3 +77,159 @@ body {
 .enter-friend {
     margin-top: 10px;
 }
+.login-container {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.login-logo {
+    position: relative;
+    margin-left: -41.5%;
+}
+.login-logo img {
+    position: absolute;
+    width: 20%;
+    margin-top: 19%;
+    background: #282726;
+    border-radius: 4.5rem;
+    padding: 5%;
+}
+.login-form-1 {
+    padding: 9%;
+    background: rgba(11, 72, 107);
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-1 h3 {
+    text-align: center;
+    margin-bottom: 12%;
+    color: #fff;
+}
+.login-form-2 {
+    padding: 9%;
+    background: rgba(59, 134, 134);
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-2 h3 {
+    text-align: center;
+    margin-bottom: 12%;
+    color: #fff;
+}
+.btnSubmit {
+    font-weight: 600;
+    width: 50%;
+    color: #282726;
+    background-color: #fff;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+}
+.btnForgetPwd {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.btnForgetPwd:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* .container-fluid {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+} */
+.row {
+    margin-bottom: 30px;
+}
+/* input page */
+@import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* * { margin: 0; padding: 0; box-sizing: border-box } */
+#new-friend-body {
+    padding: 2rem;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #060606;
+}
+ul {
+    width: min(100%, 60rem);
+    overflow: hidden;
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 5vw, 4rem);
+    list-style: none;
+    perspective: 1000px;
+    display: grid;
+    row-gap: 0.5rem;
+}
+ul li.card {
+    position: relative;
+    padding-block: 1.5rem;
+    padding-inline: 2rem;
+    background-color: var(--bg-color);
+    background-image: linear-gradient(to right, rgb(0 0 0 / 0.15), transparent);
+    transform-style: preserve-3d;
+    color: var(--color);
+
+    display: grid;
+    grid-template: 'icon' 'title' 'content';
+    row-gap: 0.5rem;
+    column-gap: 2rem;
+}
+ul li.card::before,
+ul li.card::after {
+    --side-rotate: 60deg;
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform-origin: calc(50% - (50% * var(--ry))) 50%;
+    transform: rotateY(calc(var(--side-rotate) * var(--ry)));
+    background-color: inherit;
+    background-image: linear-gradient(
+        calc(90deg * var(--ry)),
+        rgb(0 0 0 / 0.25),
+        rgb(0 0 0 / 0.5)
+    );
+}
+ul li.card::before {
+    --ry: -1;
+    right: 100%;
+}
+ul li.card::after {
+    --ry: 1;
+    left: 100%;
+}
+
+ul li.card .icon {
+    grid-area: icon;
+    display: grid;
+    place-items: center;
+}
+ul li.card .icon i {
+    font-size: 2rem;
+}
+ul li.card .title {
+    grid-area: title;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+}
+ul li.card .content {
+    grid-area: content;
+}
+
+@media (min-width: 30rem) {
+    ul li.card {
+        grid-template: 'icon title' 'icon content';
+        text-align: left;
+    }
+    ul li.card .title {
+        text-align: left;
+    }
+}
+/* current friend list */

@@ -20,6 +20,7 @@
                         id='name_input'
                         aria-describedby='emailHelp'
                         placeholder='First Name'
+                        value='{{name}}'
                     />
                 </div>
                 <div class='form-group'>
@@ -30,6 +31,7 @@
                         id='email_input'
                         aria-describedby='emailHelp'
                         placeholder='Enter email'
+                        value='{{friend.email}}'
                     />
                 </div>
                 {{! pets question? }}
@@ -41,6 +43,7 @@
                         id='pets_input'
                         aria-describedby='emailHelp'
                         placeholder='Enter pets'
+                        {{friend.pets}}
                     />
                 </div>
                 {{! what format }}
@@ -51,6 +54,7 @@
                         class='form-control'
                         id='birthday_input'
                         placeholder='Birthday'
+                        value='{{friend.birthday}}'
                     />
                 </div>
                 <div class='form-group'>
@@ -60,6 +64,7 @@
                         class='form-control'
                         id='career_input'
                         placeholder='Career'
+                        value='{{friend.career}}'
                     />
                 </div>
                 <div class='form-group'>
@@ -68,12 +73,16 @@
                         class='form-control'
                         id='comments_input'
                         rows='3'
+                        value='{{friend.comments}}'
                     ></textarea>
                 </div>
                 <div class='form-group'>
 
-                    <button id='submit-button' class='btn btn-outline-secondary' type='button'>Edit
-                        a family member</button>
+                    <button
+                        id='submit-button'
+                        class='btn btn-outline-secondary'
+                        type='button'
+                    >Edit a family member</button>
                 </div>
             </form>
         </div>
