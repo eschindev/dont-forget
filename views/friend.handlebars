@@ -28,7 +28,7 @@
 
     <h3>Family Members</h3>
     <a href='/familyMember/friend/{{friend.id}}/newFamilyMember'><button
-            class='btn btn-outline-primary'
+            class='btn btn-outline-primary2'
         >Add Family Member</button></a>
     <ul>
         {{#each friend.FamilyMembers as |familyMember|}}
@@ -52,13 +52,17 @@
         {{/each}}
     </ul>
     <a href='/'><button
-            class='btn btn-outline-primary'
-            id='my-friend-list-button'
+            class='btn btn-outline-primary2'
+            {{! id='my-friend-list-button' }}
         >My Friend List!</button></a>
     <button
-        class='delete-button btn btn-outline-primary'
-        id='delete-button-single-friend'
+        class='btn btn-outline-primary2'
         data-friend-id='{{friend.id}}'
     >delete</button>
+    <a href='/friend/{{friend.id}}/edit'><button
+            class='btn btn-outline-primary2'
+        >edit</button></a>
 </body>
 <script src='/delete-family-member.js'></script>
+<script src='/delete-friend.js'></script>
+<script src='/edit-friend.js'></script>
