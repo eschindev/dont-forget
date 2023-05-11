@@ -1,13 +1,5 @@
 const router = require("express").Router();
-const {
-  User,
-  Friend,
-  FamilyMember,
-  Pet,
-  Job,
-  Hobby,
-  Note,
-} = require("../../models");
+const { User, Friend, FamilyMember } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 router.get("/:id/edit", withAuth, async (req, res) => {

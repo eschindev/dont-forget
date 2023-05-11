@@ -10,15 +10,17 @@ document.addEventListener("DOMContentLoaded", () => {
   myDropzone.createImageThumbnails = true;
 
   myDropzone.on("addedfile", (file) => {
-    document.querySelector("#submit-button").disabled = true;
-
     const reader = new FileReader();
     reader.onload = (event) => {
       photo = event.target.result.split(",")[1];
       myDropzone.emit("complete", file);
-      document.querySelector("#submit-button").disabled = false;
     };
     reader.readAsDataURL(file);
+    let dzPreviewElements = document.querySelectorAll(".dz-preview");
+    console.log(dzPreviewElements);
+    if (dzPreviewElements.length > 1) {
+      dzPreviewElements[dzPreviewElements.length - 2].style.display = "none";
+    }
   });
 });
 
