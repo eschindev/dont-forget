@@ -1,5 +1,5 @@
 <body id='card-body'>
-    <a href='/'><button class='btn btn-outline-primary'>I'm done!</button></a>
+
     <article>
         <figure>
             {{#if friend.photo}}
@@ -51,5 +51,14 @@
             </li>
         {{/each}}
     </ul>
+    <a href='/'><button
+            class='btn btn-outline-primary'
+            id='my-friend-list-button'
+        >My Friend List!</button></a>
+    <button
+        class='delete-button btn btn-outline-primary'
+        id='delete-button-single-friend'
+        data-friend-id='{{friend.id}}'
+    >delete</button>
 </body>
 <script src='/delete-family-member.js'></script>
