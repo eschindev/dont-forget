@@ -1,54 +1,55 @@
-<body id="card-body">
-  <article>
-    <figure>
-      {{#if friend.photo}}
-        <img src="{{friend.photo}}" height="200" width="200" />
-      {{else}}
-        <img src="/images/defaultPhoto.jpg" height="200" width="200" />
-      {{/if}}
-    </figure>
-    <h2 id="friend-name" data-friend-id="{{friend.id}}">{{friend.name}}</h2>
-    {{#if friend.birthday}}
-      <p>Birthday: {{friend.birthday}}</p>
-    {{/if}}
-    {{#if friend.significant_other}}
-      <p>Significant Other: {{friend.significant_other}}</p>
-    {{/if}}
-    {{#if friend.phone}}
-      <p>Phone: {{friend.phone}}</p>
-    {{/if}}
-    {{#if friend.email}}
-      <p>Email: {{friend.email}}</p>
-    {{/if}}
-    {{#if friend.address}}
-      <p>Address: {{friend.address}}</p>
-    {{/if}}
-  </article>
+<body id='card-body'>
+    <a href='/'><button class='btn btn-outline-primary'>I'm done!</button></a>
+    <article>
+        <figure>
+            {{#if friend.photo}}
+                <img src='{{friend.photo}}' height='200' width='200' />
+            {{else}}
+                <img src='/images/defaultPhoto.jpg' height='200' width='200' />
+            {{/if}}
+        </figure>
+        <h2 id='friend-name' data-friend-id='{{friend.id}}'>{{friend.name}}</h2>
+        {{#if friend.birthday}}
+            <p>Birthday: {{friend.birthday}}</p>
+        {{/if}}
+        {{#if friend.significant_other}}
+            <p>Significant Other: {{friend.significant_other}}</p>
+        {{/if}}
+        {{#if friend.phone}}
+            <p>Phone: {{friend.phone}}</p>
+        {{/if}}
+        {{#if friend.email}}
+            <p>Email: {{friend.email}}</p>
+        {{/if}}
+        {{#if friend.address}}
+            <p>Address: {{friend.address}}</p>
+        {{/if}}
+    </article>
 
-  <h3>Family Members</h3>
-  <a href="/familyMember/friend/{{friend.id}}/newFamilyMember"><button
-      class="btn btn-outline-primary"
-    >Add Family Member</button></a>
-  <ul>
-    {{#each friend.FamilyMembers as |familyMember|}}
-      <hr />
-      <li>
-        <p>Name: {{familyMember.fam_name}}</p>
-        {{#if familyMember.fam_rel}}
-          <p>Relationship: {{familyMember.fam_rel}}</p>
-        {{/if}}
-        {{#if familyMember.birthday}}
-          <p>Birthday: {{familyMember.birthday}}</p>
-        {{/if}}
-        <a href="/familyMember/{{familyMember.id}}"><button
-            class="btn"
-          >edit</button></a>
-        <button
-          class="delete-button btn"
-          data-family-member-id="{{familyMember.id}}"
-        >delete</button>
-      </li>
-    {{/each}}
-  </ul>
+    <h3>Family Members</h3>
+    <a href='/familyMember/friend/{{friend.id}}/newFamilyMember'><button
+            class='btn btn-outline-primary'
+        >Add Family Member</button></a>
+    <ul>
+        {{#each friend.FamilyMembers as |familyMember|}}
+            <hr />
+            <li>
+                <p>Name: {{familyMember.fam_name}}</p>
+                {{#if familyMember.fam_rel}}
+                    <p>Relationship: {{familyMember.fam_rel}}</p>
+                {{/if}}
+                {{#if familyMember.birthday}}
+                    <p>Birthday: {{familyMember.birthday}}</p>
+                {{/if}}
+                <a href='/familyMember/{{familyMember.id}}'><button
+                        class='btn'
+                    >edit</button></a>
+                <button
+                    class='delete-button btn'
+                    data-family-member-id='{{familyMember.id}}'
+                >delete</button>
+            </li>
+        {{/each}}
+    </ul>
 </body>
-<script src="/delete-family-member.js"></script>
+<script src='/delete-family-member.js'></script>
