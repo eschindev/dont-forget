@@ -1,3 +1,4 @@
+require("dotenv").config();
 const path = require("path");
 const express = require("express");
 const session = require("express-session");
@@ -14,17 +15,17 @@ const PORT = process.env.PORT || 3002;
 // app.use("/images", express.static(path.join(__dirname, "/public/images")));
 
 const sess = {
-  secret: "Super secret secret",
+  secret: process.env.SESS_SECRET,
 
-  //   cookie: {
-  //     maxAge: 360000,
-  //     httpOnly: false,
-  //     secure: false,
-  //     sameSite: "strict",
-  //   },
+  cookie: {
+    maxAge: 360000,
+    httpOnly: false,
+    secure: false,
+    sameSite: "strict",
+  },
   resave: false,
   saveUninitialized: true,
-  // Sets up session store
+
   store: new SequelizeStore({
     db: sequelize,
   }),
