@@ -16,6 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
       myDropzone.emit("complete", file);
     };
     reader.readAsDataURL(file);
+    let dzPreviewElements = document.querySelectorAll(".dz-preview");
+    console.log(dzPreviewElements);
+    if (dzPreviewElements.length > 1) {
+      dzPreviewElements[dzPreviewElements.length - 2].style.display = "none";
+    }
   });
 });
 
