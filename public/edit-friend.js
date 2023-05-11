@@ -10,13 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
   myDropzone.createImageThumbnails = true;
 
   myDropzone.on("addedfile", (file) => {
-    document.querySelector("#submit-button").disabled = true;
-
     const reader = new FileReader();
     reader.onload = (event) => {
       photo = event.target.result.split(",")[1];
-
-      document.querySelector("#submit-button").disabled = false;
+      myDropzone.emit("complete", file);
     };
     reader.readAsDataURL(file);
   });
@@ -24,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const editFriendFormHandler = async (event) => {
   event.preventDefault();
+  console.log("form submitted!");
 
   const name = document.querySelector("#name_input").value.trim();
   const birthday = document.querySelector("#birthday_input").value.trim();

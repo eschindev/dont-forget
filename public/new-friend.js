@@ -1,4 +1,4 @@
-let photo = null;
+let photo;
 
 document.addEventListener("DOMContentLoaded", () => {
   const myDropzone = Dropzone.forElement(".dropzone");
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const reader = new FileReader();
     reader.onload = (event) => {
       photo = event.target.result.split(",")[1];
-
+      myDropzone.emit("complete", file);
       document.querySelector("#submit-button").disabled = false;
     };
     reader.readAsDataURL(file);
