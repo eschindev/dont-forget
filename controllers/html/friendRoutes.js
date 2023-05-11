@@ -16,6 +16,14 @@ router.get("/:id/edit", withAuth, async (req, res) => {
 
     const friend = friendData.get({ plain: true });
 
+    if (friend.photo) {
+      const photoBuffer = friend.photo;
+      const photoDataUri = `data:image/png;base64,${photoBuffer.toString(
+        "base64"
+      )}`;
+      friend.photo = photoDataUri;
+    }
+
     res.render("edit-friend", {
       friend,
       logged_in: req.session.logged_in,
