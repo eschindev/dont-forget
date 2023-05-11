@@ -5,13 +5,13 @@
 
 <div class='row'>
     <div
-        class='col-10 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center'
+        class='col-10 offset-1 col-lg-10 offset-lg-1 div-wrapper d-flex justify-content-center align-items-center'
     >
         <div class='edit-friend'>
             <h2 class='page-title'>Edit Friend</h2>
             <div class='thumb'>
                 {{#if friend.photo}}
-                    <img src='{{photo}}' height='200' width='200' />
+                    <img src='{{friend.photo}}' height='200' width='200' />
                 {{else}}
                     <img
                         src='/images/defaultPhoto.jpg'
@@ -22,9 +22,13 @@
             </div>
 
             <form action='/api/upload' class='dropzone'></form>
-            <form class='edit-friend-form' data-friend-id={{friend.friend_id}}>
+            <form
+                class='edit-friend'
+                id='form-group'
+                data-friend-id={{friend.friend_id}}
+            >
 
-                <div class='form-group'>
+                <div class='form-group input-medium'>
                     <label for='example'>Name</label>
                     <input
                         type='text'
