@@ -1,29 +1,60 @@
-<html lang="en">
+<html lang='en'>
 
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset='utf-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
 
-    <link
-      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-      rel="stylesheet"
-      id="bootstrap-css"
-    />
-    {{! <link rel='stylesheet' type='text/css' href='/css/reset.css' />  }}
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
-  </head>
+        <link
+            href='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css'
+            rel='stylesheet'
+            id='bootstrap-css'
+        />
 
-  <body>
+        <link rel='stylesheet' type='text/css' href='/css/style.css' />
+    </head>
 
-    <div class="container">
+    <body>
+
+        {{!-- <div class="container">
       {{> nav-bar}}
-    </div>
-    {{{body}}}
-    <script
-      src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-    ></script>
-    <script
-      src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
-    ></script>
-  </body>
+    </div> --}}
+        {{! <nav class='navbar navbar-expand-lg navbar-red navbar-dark'>
+            <div class='wrapper'>
+                <div class='container-fluid all-show text-center'>
+                    <a href='/'><img
+                            src='/images/logo.jpg'
+                            height='200'
+                            width='200'
+                        /></a>
+                    <h1>Don't Forget!</h1>
+                    <button id='logout-btn' class='btn btn-outline-primary'>Log
+                        out</button>
+                </div>
+            </div>
+        </nav> }}
+
+        <nav class='navbar bg-success'>
+            <div class='container'>
+                <a class='navbar-brand' href='/'>
+                    <img
+                        src='/images/logo.jpg'
+                        alt='logo'
+                        width='100'
+                        height='100'
+                    />
+                    Don't Forget!
+                </a>
+                <button id='logout-btn' class='btn btn-outline-primary'>Log out</button>
+
+            </div>
+        </nav>
+
+        {{{body}}}
+        <script
+            src='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js'
+        ></script>
+        <script
+            src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'
+        ></script>
+    </body>
 </html>
