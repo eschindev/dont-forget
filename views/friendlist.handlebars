@@ -1,13 +1,13 @@
 <body id='body'>
     <div class='container'>
         <div class='row'>
-            <div class='content col-md-12'>
-                <h1 class='text-success text-center'>My Friends</h1>
+            <div class='content col-md-12' id='border-friend'>
+                <h1 class='text-center' id='friend-list-title'>My Friends</h1>
 
                 <ul class='team'>
                     {{#each friends as |friend|}}
                         <hr />
-                        <li class='member co-funder border border-success'>
+                        <li class='member co-funder' id='border'>
                             <div class='thumb'>
                                 {{#if friend.photo}}
                                     <img
@@ -32,9 +32,11 @@
                                 <p>Phone: {{friend.phone}}</p>
                                 <a href='/friend/{{friend.id}}/edit'><button
                                         class='btn'
+                                        id='mini-button'
                                     >edit</button></a>
                                 <button
                                     class='delete-button btn'
+                                    id='mini-button'
                                     data-friend-id='{{friend.id}}'
                                 >delete</button>
                             </div>
@@ -44,7 +46,8 @@
 
                 {{! <div class='row'> }}
                 <div class='form-group text-center'>
-                    <a href='/friend'><button class='btn btn-primary'>Add Friend</button></a>
+                    <a href='/friend'><button class='btn btn-primary4'>Add
+                            Friend</button></a>
                 </div>
                 {{! </div> }}
             </div>
