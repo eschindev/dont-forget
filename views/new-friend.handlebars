@@ -8,8 +8,10 @@
         class='col-10 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center'
     >
         <div class='add-friend'>
-            <h2 class='page-title'>Add Friend</h2>
+            <h2 class='page-title-add'>Add Friend</h2>
+
             <form action='/api/upload' class='dropzone'></form>
+
             <form class='add-friend-form' data-user-id={{user_id}}>
 
                 <div class='form-group'>
@@ -72,7 +74,7 @@
 
                     <button
                         id='submit-button'
-                        class='btn btn-outline-primary'
+                        class='btn btn-outline-primary2'
                         type='submit'
                     >Save</button>
                 </div>
@@ -84,44 +86,3 @@
     src='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/min/dropzone.min.js'
 ></script>
 <script src='new-friend.js'></script>
-
-{{! <body id="input-body">
-
-    <ul>
-        <li class="card" style="--color:#ececec; --bg-color:#CFF09E">
-            <div class="icon"><i class="fa-solid fa-house"></i></div>
-            <label for="name">Name</label>
-
-            <input type="text" id="name" name="name">
-
-        </li>
-        <li class="card" style="--color:#ececec; --bg-color:#A8DBA8">
-            <div class="icon"><i class="fa-solid fa-gear"></i></div>
-            <label for="name">Email</label>
-
-            <input type="text" id="name" name="name">
-
-        </li>
-        <li class="card" style="--color:#ececec; --bg-color:#79B09A">
-            <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-            <label for="name">Birthday</label>
-
-            <input type="text" id="name" name="name">
-
-        </li>
-        <li class="card" style="--color:#ececec; --bg-color:#3B8686">
-            <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-            <label for="name">Career</label>
-
-            <input type="text" id="name" name="name">
-
-
-        </li>
-        <li class="card" style="--color:#ececec; --bg-color:#08486b">
-            <div class="icon"><i class="fa-solid fa-circle-star"></i></div>
-            <label for="name">Pets</label>
-
-            <input type="text" id="name" name="name">
-
-        </li>
-    </ul> }}

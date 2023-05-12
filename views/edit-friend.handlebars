@@ -8,7 +8,7 @@
         class='col-10 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center'
     >
         <div class='edit-friend'>
-            <h2 class='page-title'>Edit Friend</h2>
+            <h2 class='page-title-edit'>Edit Friend</h2>
             <div class='thumb'>
                 {{#if friend.photo}}
                     <img src='{{friend.photo}}' height='200' width='200' />
@@ -23,7 +23,6 @@
 
             <form action='/api/upload' class='dropzone'></form>
             <form class='edit-friend-form' data-friend-id={{friend.friend_id}}>
-
                 <div class='form-group'>
                     <label for='example'>Name</label>
                     <input
@@ -90,7 +89,7 @@
 
                     <button
                         id='submit-button'
-                        class='btn btn-outline-secondary'
+                        class='btn btn-outline-primary3'
                         type='submit'
                     >Save</button>
                     <a
