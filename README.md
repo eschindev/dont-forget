@@ -2,7 +2,7 @@
 
 ## SITE
 
-[Live Site]('https://dont-forget-app.herokuapp.com/')
+[Live Site](https://dont-forget-app.herokuapp.com/)
 
 ## Example
 
@@ -14,21 +14,21 @@ This project enables the user to easily add, edit and delete information about t
 
 ## Technology Used and Credit
 
--   [Express]('https://expressjs.com/')
--   [NodeJS]('https://nodejs.org/en')
--   [Heroku]('https://devcenter.heroku.com/')
--   [Dropzone]('https://www.dropzone.dev/')
--   [Handlebars]('https://handlebarsjs.com/')
+- [Express]('https://expressjs.com/')
+- [NodeJS]('https://nodejs.org/en')
+- [Heroku]('https://devcenter.heroku.com/')
+- [Dropzone]('https://www.dropzone.dev/')
+- [Handlebars]('https://handlebarsjs.com/')
 
 ## Installations
 
--   NodeJS
--   Express
--   Heroku
--   Bootstrap
--   Dropzone
--   MySql
--   Handlebars
+- NodeJS
+- Express
+- Heroku
+- Bootstrap
+- Dropzone
+- MySql
+- Handlebars
 
 ## Code Example
 
@@ -55,6 +55,6 @@ This was a great opportunity to work as team and learn from each other. We had g
 
 ## Developers
 
--   Evan Schindler
--   Victoria Tolliver
--   Laurie Fish
+- Evan Schindler
+- Victoria Tolliver
+- Laurie Fish
